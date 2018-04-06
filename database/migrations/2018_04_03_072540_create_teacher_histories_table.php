@@ -15,7 +15,7 @@ class CreateTeacherHistoriesTable extends Migration
     {
         Schema::create('teacher_histories', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('teacher_id');
+            $table->integer('teacher_id')->unsigned();
             $table->integer('year');
             $table->integer('month');
             $table->text('detail');
